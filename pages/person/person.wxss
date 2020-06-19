@@ -1,0 +1,74 @@
+/* pages/person/person.wxss */
+.top{
+  margin-top: 10%;
+  margin-left: 6%;
+  margin-bottom: 5%;
+  width: 88%;
+  background-color:#e4f77a;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items:center ;
+}
+.head{
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  margin: 5%;
+}
+.topdetail{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+}
+.text{
+  margin: 5%; 
+}
+
+.detailpane{
+  margin-top: 6%;
+  margin-left: 6%;
+  width: 88%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items:center ;
+}
+
+
+.logout{
+  position: fixed;
+  bottom: 2%;
+  margin-top: 6%;
+  margin-left: 6%;
+  width: 88%;
+  background-color: rgb(250, 76, 76);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center ;
+}
+.logouttext{
+  margin: 3%; 
+  color: white;
+}
+
+.descriptionPane{
+  margin-left: 6%;
+  width: 88%;
+  margin-top: 5%;
+}
+.textback{
+  padding:10px;
+  background-color: rgb(238, 238, 238);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items:center ;
+  justify-content: space-around;
+  word-break: break-all;
+}

@@ -1,0 +1,9 @@
+<!--pages/splash/splash.wxml-->
+<view class="main">
+	<view class="logo">
+		<image  class="avatar" src="../../image/logo.png"/>
+	</view>
+  <view class="textView">
+  <text class="text">枫叶学校云</text>
+  </view>
+</view>

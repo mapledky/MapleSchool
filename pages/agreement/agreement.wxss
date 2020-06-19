@@ -1,0 +1,14 @@
+/* pages/agreement/agreement.wxss */
+.title{
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.text{
+  font-size: 13px;
+  margin-left: 5%;
+  width: 90%;
+}

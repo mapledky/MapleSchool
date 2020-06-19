@@ -1,0 +1,44 @@
+<!--pages/courseDetail/courseDetail.wxml-->
+<view class="coursepane">
+	<image class="image" src="{{courseDetail .cover}}"></image>
+	<view class="coursedetail">
+		<text>{{courseDetail.name}}</text>
+		<text>课程人数:{{courseDetail.class_limit}}</text>
+		<text>截止时间:{{courseDetail.deadline}}</text>
+	</view>
+</view>
+
+<view class="descriptionPane">
+	<view class="textback" style="background-color:rgb(181, 255, 162)">
+		<text>当前报名人数:{{courseDetail.registerNumber}}</text>
+		<text>报名开始日期:{{courseDetail.startDate}}</text>
+	</view>
+</view>
+<view class="textpane">
+	<view class="description">课程简介:
+		{{courseDetail.description}}</view>
+</view>
+<view class="register" bindtap="register">
+	<text class="registertext">立即报名</text>
+</view>
+
+<block wx:if="{{isShowConfirm}}">
+	<view class='toast-box'>
+		<view class='toastbg'></view>
+		<view class='showToast'>
+			<view class='toast-title'>
+				<text>确认报名</text>
+			</view>
+			<view class='toast-main'>
+				<view class='toast-input'>
+					<input type='number' placeholder='输入家长电话号码' bindinput='setValue' data-name='stuEidtName'></input>
+				</view>
+			</view>
+			<view class='toast-button'>
+				<button class='button1' catchtap='cancel'>取消</button>
+				<button class='button2' catchtap='confirmAcceptance'>确定</button>
+
+			</view>
+		</view>
+	</view>
+</block>

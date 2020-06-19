@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="main">
+
+	<image src="../../image/login_top.png" class="topimage" />
+
+
+		<view class="textview">
+			<input name="account" type="number" maxlength="8" bindinput="getAccount" class="input" placeholder="学号"></input>
+			<input name="password" bindinput="getPassword" class="input" placeholder="密码" password></input>
+		</view>
+
+	<view class="logo">
+		<image bindtap="login" class="avatar" src="../../image/login.png" />
+	</view>
+	<view class="agree_text">
+		<image src="{{checkSrc}}" bindtap="onCheckClicked" class="check_img" />
+		<text bindtap="toAgreement">用户协议</text>
+		
+	</view>
+</view>

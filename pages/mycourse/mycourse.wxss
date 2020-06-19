@@ -1,0 +1,54 @@
+/* pages/mycourse/mycourse.wxss */
+.descriptionPane{
+  margin-left: 6%;
+  width: 88%;
+  margin-top: 5%;
+}
+.textback{
+  padding:10px;
+  background-color: rgb(238, 238, 238);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items:center ;
+  justify-content: space-around;
+  word-break: break-all;
+}
+
+.coursepane{
+  margin-left: 6%;
+  margin-top: 5%;
+  width: 88%; 
+  background-color:#f2f2f2 ;
+  border-radius: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.image{
+  margin: 5px;
+  width:80px ;
+  height:80px ;
+  border-radius: 20px;
+}
+.coursedetail{
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.cancel{
+  background-color: rgb(250, 76, 76);
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin-right: 5%;
+  color: white;
+  align-items: center;
+  border-radius: 12px;
+  padding: 7px;
+}

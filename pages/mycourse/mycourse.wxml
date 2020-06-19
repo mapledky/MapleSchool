@@ -1,0 +1,20 @@
+<!--pages/mycourse/mycourse.wxml-->
+<view class="descriptionPane">
+	<view class="textback" style="background-color:rgb(181, 255, 162)">
+		<text>当前报名课程:{{registerNumber}}门</text>
+	</view>
+</view>
+
+<block wx:for="{{presentData}}" wx:for-item="item" wx:for-index="key">
+	<view class="coursepane" style="background-color:{{randomColorArr[key%3]}}" bindtap="chooseCourse" data-course="{{item.Id}}">
+		<image class="image" src="{{item.cover}}"></image>
+		<view class="coursedetail">
+			<text>{{item.name}}</text>
+			<text>课程人数:{{item.class_limit}}</text>
+			<text>截止时间:{{item.deadline}}</text>
+		</view>
+
+    <view class="cancel" catchtap="cancel" data-course="{{item.Id}}">取消</view>
+	</view>
+
+</block>

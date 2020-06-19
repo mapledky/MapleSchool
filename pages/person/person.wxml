@@ -1,0 +1,27 @@
+<!--pages/person/person.wxml-->
+<view class="top">
+	<image class="head" src="../../image/logo.png"></image>
+	<view class="topdetail">
+		<text>名字:{{name}}</text>
+		<text>学号:{{Id}}</text>
+	</view>
+</view>
+
+<view class="descriptionPane">
+	<view class="textback" style="background-color:rgb(181, 255, 162)">
+		<text>周期课程报名限制:{{maxcourse}}门</text>
+	</view>
+</view>
+<view class="detailpane" style="background-color:#B1DCFF" bindtap="mycourse">
+	<text class="text" >我的课程</text>
+</view>
+<view class="detailpane" bindtap="agreement" style="background-color:#FFDC65">
+	<text class="text">用户协议</text>
+</view>
+<view class="detailpane" bindtap="about" style="background-color:#e4f77a">
+	<text class="text">关于我们</text>
+</view>
+
+<view class="logout" bindtap="logout">
+	<text class="logouttext">退出登录</text>
+</view>

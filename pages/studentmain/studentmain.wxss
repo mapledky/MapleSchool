@@ -1,0 +1,96 @@
+/* pages/studentmain/studentmain.wxss */
+.root {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.main{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.backimage{
+  position: absolute;
+  width: 100%;
+}
+
+.logo {
+  padding-top: 10%;
+  display: flex;
+  background-color: transparent;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.schoolname {
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.avatar{
+  height: 100px;
+  width: 100px;
+  border-radius: 25px;
+}
+.mainmenu{
+  margin-top: 10%;
+  margin-left: 6%;
+  width: 88%;
+  background-color: rgb(238, 238, 238);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items:center ;
+  justify-content: space-around;
+}
+
+.menuchoice{
+  padding-top: 5%;
+  padding-bottom:5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.menuimg{
+  height: 45px;
+  width: 45px;
+}
+.menutext{
+  padding-top: 5%;
+  font-size: 12px;
+}
+.textback{
+  margin-top: 5%;
+  margin-left: 6%;
+  width: 88%;
+  background-color: rgb(238, 238, 238);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items:center ;
+  justify-content: space-around;
+}
+.text{
+  margin: 1%;
+}
+
+.topimage{
+  height: 150px;
+  width: 100%;
+}
+.lunbo{
+  margin-left: 6%;
+  height: 150px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 88%;
+}
+.schoolimage{
+  height: 150px;
+  width: 100%;
+  border-radius: 20px;
+}

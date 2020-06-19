@@ -1,0 +1,61 @@
+<!--pages/studentmain/studentmain.wxml-->
+<view class="root">
+	<image class="backimage" src="https://app.maple.today/mapleschool/maintop.jpg"></image>
+
+	<view class="main">
+		<view class="logo">
+			<image class="avatar" src="{{schoolHead}}" />
+		</view>
+		<view class="schoolname">
+			<text>{{schoolName}}</text>
+		</view>
+
+		<view class="mainmenu">
+			<view class="menuchoice" bindtap="chooseClass">
+				<image class="menuimg" src="../../image/chooseclass.png" />
+				<view class="menutext">
+					<text>云选课</text>
+				</view>
+			</view>
+
+			<view class="menuchoice" bindtap="description">
+				<image class="menuimg" src="../../image/school.png" 
+				
+				/>
+				<view class="menutext">
+					<text>学校简介</text>
+				</view>
+			</view>
+
+			<view class="menuchoice" bindtap="about">
+				<image class="menuimg" src="../../image/about.png" />
+				<view class="menutext" >
+					<text>关于平台</text>
+				</view>
+			</view>
+
+			<view class="menuchoice" bindtap="toPerson">
+				<image class="menuimg" src="../../image/person.png" />
+				<view class="menutext">
+					<text>个人中心</text>
+				</view>
+			</view>
+		</view>
+		<swiper class="lunbo" indicator-dots="true" autoplay="true" interval="3000">
+			<swiper-item>
+				<image src="https://app.maple.today/mapleschool/advertise.png" class="topimage" />
+			</swiper-item>
+		</swiper>
+
+
+		<view class="textback">
+			<text class="text">校园风采一览</text>
+		</view>
+
+		<swiper class="lunbo" indicator-dots="true" autoplay="true" wx:if="{{schoolimage!=null}}" interval="3000">
+			<swiper-item wx:key="{{index}}" wx:for="{{schoolimage}}">
+				<image src="{{item}}" class="schoolimage" />
+			</swiper-item>
+		</swiper>
+	</view>
+</view>

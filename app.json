@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/splash/splash",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/agreement/agreement",
+    "pages/studentmain/studentmain",
+    "pages/schoolmain/schoolmain",
+    "pages/person/person",
+    "pages/chooseClass/chooseclass",
+    "pages/courseDetail/courseDetail",
+    "pages/mycourse/mycourse",
+    "pages/description/description",
+    "pages/useragreement/useragreement",
+    "pages/about/about"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFF",
+    "navigationBarTitleText": "云校园",
+    "navigationBarTextStyle": "black"
+  },
+ 
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
