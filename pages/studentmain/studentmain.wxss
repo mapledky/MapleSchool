@@ -31,9 +31,9 @@
   justify-content: center;
 }
 .avatar{
-  height: 100px;
-  width: 100px;
-  border-radius: 25px;
+  height: 150px;
+  width: 150px;
+  border-radius: 30px;
 }
 .mainmenu{
   margin-top: 10%;

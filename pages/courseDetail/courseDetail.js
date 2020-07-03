@@ -10,7 +10,8 @@ Page({
     courseId: null,
     courseDetail: null,
     phonenumber: null,
-    isShowConfirm: false
+    isShowConfirm: false,
+    originalPic: "https://app.maple.today/mapleschool/2/head/head.jpg"
   },
 
   /**

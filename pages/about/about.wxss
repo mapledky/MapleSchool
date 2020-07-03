@@ -43,12 +43,11 @@
   word-break: break-all;
 }
 .botton{
-  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  bottom: 30rpx;
+  margin-top: 10%;
   left: 0;
   right: 0;
 }

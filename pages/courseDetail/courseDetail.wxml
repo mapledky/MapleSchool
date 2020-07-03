@@ -8,16 +8,27 @@
 	</view>
 </view>
 
+
 <view class="descriptionPane">
 	<view class="textback" style="background-color:rgb(181, 255, 162)">
 		<text>当前报名人数:{{courseDetail.registerNumber}}</text>
 		<text>报名开始日期:{{courseDetail.startDate}}</text>
 	</view>
 </view>
+
+<view class="descriptionPane">
+	<view class="textback" style="background-color:rgb(181, 255, 162)">
+		<text>{{courseDetail.teacher}}</text>
+		<text>{{courseDetail.location}}</text>
+	</view>
+</view>
+
 <view class="textpane">
-	<view class="description">课程简介:
+	<view class="description">
 		{{courseDetail.description}}</view>
 </view>
+
+
 <view class="register" bindtap="register">
 	<text class="registertext">立即报名</text>
 </view>

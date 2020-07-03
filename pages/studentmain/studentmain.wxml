@@ -4,7 +4,7 @@
 
 	<view class="main">
 		<view class="logo">
-			<image class="avatar" src="{{schoolHead}}" />
+			<image class="avatar"  src="{{schoolHead}}" />
 		</view>
 		<view class="schoolname">
 			<text>{{schoolName}}</text>
@@ -46,7 +46,6 @@
 				<image src="https://app.maple.today/mapleschool/advertise.png" class="topimage" />
 			</swiper-item>
 		</swiper>
-
 
 		<view class="textback">
 			<text class="text">校园风采一览</text>

@@ -10,8 +10,8 @@
 }
 .image{
   margin: 5px;
-  width:80px ;
-  height:80px ;
+  width:100px ;
+  height:100px ;
   border-radius: 20px;
 }
 .coursedetail{
@@ -144,5 +144,17 @@
   color: black;
   border-radius: 0px;
   border-bottom-right-radius: 25rpx;
+}
+
+.lunbo{
+  margin-left: 6%;
+  height: 150px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 88%;
+}
+.topimage{
+  height: 150px;
+  width: 100%;
 }
 

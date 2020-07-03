@@ -9,5 +9,5 @@
 	<text class="text">{{schoolName}}</text>
 </view>
 <view class="textpane">
-<text class="school_description">{{description}}</text>
+<text class="school_description" space="emsp">  {{description}}</text>
 </view>
