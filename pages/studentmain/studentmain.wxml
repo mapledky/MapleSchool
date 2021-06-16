@@ -1,10 +1,10 @@
 <!--pages/studentmain/studentmain.wxml-->
 <view class="root">
-	<image class="backimage" src="https://app.maple.today/mapleschool/maintop.jpg"></image>
+	<image class="backimage" src="https://site.maple.today/maple/mapleschool/maintop.jpg"></image>
 
 	<view class="main">
 		<view class="logo">
-			<image class="avatar"  src="{{schoolHead}}" />
+			<image class="avatar"  src='{{schoolHead?schoolHead:"../../image/logo.png"}}'/>
 		</view>
 		<view class="schoolname">
 			<text>{{schoolName}}</text>
@@ -43,7 +43,7 @@
 		</view>
 		<swiper class="lunbo" indicator-dots="true" autoplay="true" interval="3000">
 			<swiper-item>
-				<image src="https://app.maple.today/mapleschool/advertise.png" class="topimage" />
+				<image src="https://site.maple.today/maple/mapleschool/advertise.png" class="topimage" />
 			</swiper-item>
 		</swiper>
 

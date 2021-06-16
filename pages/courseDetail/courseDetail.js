@@ -11,7 +11,7 @@ Page({
     courseDetail: null,
     phonenumber: null,
     isShowConfirm: false,
-    originalPic: "https://app.maple.today/mapleschool/2/head/head.jpg"
+    originalPic: "https://site.maple.today/mapleschool/2/head/head.jpg"
   },
 
   /**
@@ -31,7 +31,7 @@ Page({
     })
     var that = this;
     wx.request({
-      url: 'https://app.maple.today/MapleSchool/SchoolMain',
+      url: 'https://site.maple.today/MapleSchool/SchoolMain',
       data: {
         requestCode: "003", //当前页
         courseId: that.data.courseId,
@@ -103,7 +103,7 @@ Page({
       })
       var that = this;
       wx.request({
-        url: 'https://app.maple.today/MapleSchool/SchoolMain',
+        url: 'https://site.maple.today/MapleSchool/SchoolMain',
         data: {
           requestCode: "004", //当前页
           courseId: that.data.courseId,

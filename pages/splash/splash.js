@@ -33,7 +33,7 @@ Page({
 
 
       wx.request({
-        url: 'https://app.maple.today/MapleSchool/SchoolMain',
+        url: 'https://site.maple.today/MapleSchool/SchoolMain',
         data: {
           requestCode: "001", //当前页
           account: account,
@@ -53,6 +53,7 @@ Page({
             wx.removeStorage({
               key:'password',
             })
+            /*
             wx.showToast({
               title: "账号密码过期，请重新登陆",
               icon: 'none',
@@ -62,6 +63,7 @@ Page({
               fail: function () {},
               complete: function () {}
             })
+            */
             wx.redirectTo({
               url: '../index/index',
             })

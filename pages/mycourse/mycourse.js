@@ -36,7 +36,7 @@ Page({
 
     var that = this;
     wx.request({
-      url: 'https://app.maple.today/MapleSchool/SchoolMain',
+      url: 'https://site.maple.today/MapleSchool/SchoolMain',
       data: {
         requestCode: "006", //当前页
         user_id: that.data.user_id,
@@ -127,7 +127,7 @@ Page({
 
     var that = this;
     wx.request({
-      url: 'https://app.maple.today/MapleSchool/SchoolMain',
+      url: 'https://site.maple.today/MapleSchool/SchoolMain',
       data: {
         requestCode: "005", //当前页
         user_id: that.data.user_id,

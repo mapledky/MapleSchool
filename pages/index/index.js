@@ -97,7 +97,7 @@ Page({
 
       var that = this
       wx.request({
-        url: 'https://app.maple.today/MapleSchool/SchoolMain',
+        url: 'https://site.maple.today/MapleSchool/SchoolMain',
         data: {
           requestCode: "001", //当前页
           account: this.data.account,

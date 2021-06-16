@@ -28,7 +28,7 @@ Page({
 
     var that = this;
     wx.request({
-      url: 'https://app.maple.today/MapleSchool/SchoolMain',
+      url: 'https://site.maple.today/MapleSchool/SchoolMain',
       data: {
         requestCode: "002", //当前页
         school: app.globalData.userinfo.school,
@@ -122,7 +122,7 @@ Page({
         complete: function () {}
       })
       wx.request({
-        url: 'https://app.maple.today/MapleSchool/SchoolMain',
+        url: 'https://site.maple.today/MapleSchool/SchoolMain',
         data: {
           requestCode: "003", //当前页
           courseId: that.data.searchValue,
