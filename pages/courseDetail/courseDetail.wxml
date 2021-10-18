@@ -42,7 +42,7 @@
 			</view>
 			<view class='toast-main'>
 				<view class='toast-input'>
-					<input type='number' placeholder='输入家长电话号码' bindinput='setValue' data-name='stuEidtName'></input>
+					<input type='number' maxlength="20" placeholder='输入家长电话号码' bindinput='setValue' data-name='stuEidtName'></input>
 				</view>
 			</view>
 			<view class='toast-button'>

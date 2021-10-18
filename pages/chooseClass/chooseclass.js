@@ -32,7 +32,8 @@ Page({
       data: {
         requestCode: "002", //当前页
         school: app.globalData.userinfo.school,
-        grade:app.globalData.userinfo.grade
+        grade:app.globalData.userinfo.grade,
+        user_id:app.globalData.userinfo.Id
       },
       method: 'POST',
       header: {
@@ -111,60 +112,63 @@ Page({
   },
 
   searchCourse: function (e) {
-    if (this.data.searchValue != "") {
-      var that = this;
-      wx.showToast({
-        title: "加载中...",
-        icon: 'loading', //图标，支持"success"、"loading"
-        mask: true, //是否显示透明蒙层，防止触摸穿透，默认：false 
-        success: function () {},
-        fail: function () {},
-        complete: function () {}
-      })
-      wx.request({
-        url: 'https://site.maple.today/MapleSchool/SchoolMain',
-        data: {
-          requestCode: "003", //当前页
-          courseId: that.data.searchValue,
-        },
-        method: 'POST',
-        header: {
-          'content-type': 'application/x-www-form-urlencoded'
-        },
-        success: function (res) {
-          wx.hideLoading();
-          var data = res.data;
-          if (data[0].result != "0") {
-            for (var i = 0; i < data.length; i++) {
-              if (data[i].cover == "original") {
-                data[i].cover = "../../image/logo.png"
-              }
-            }
-            that.setData({
-              presentclassdata: data
-            })
-          } else {
-            wx.showToast({
-              title: "没有这门课程哦",
-              icon: 'success', //图标，支持"success"、"loading"
-              mask: false, //是否显示透明蒙层，防止触摸穿透，默认：false 
+    wx.showToast({
+      title: '暂未开放',
+    })
+    // if (this.data.searchValue != "") {
+    //   var that = this;
+    //   wx.showToast({
+    //     title: "加载中...",
+    //     icon: 'loading', //图标，支持"success"、"loading"
+    //     mask: true, //是否显示透明蒙层，防止触摸穿透，默认：false 
+    //     success: function () {},
+    //     fail: function () {},
+    //     complete: function () {}
+    //   })
+    //   wx.request({
+    //     url: 'https://site.maple.today/MapleSchool/SchoolMain',
+    //     data: {
+    //       requestCode: "003", //当前页
+    //       courseId: that.data.searchValue,
+    //     },
+    //     method: 'POST',
+    //     header: {
+    //       'content-type': 'application/x-www-form-urlencoded'
+    //     },
+    //     success: function (res) {
+    //       wx.hideLoading();
+    //       var data = res.data;
+    //       if (data[0].result != "0") {
+    //         for (var i = 0; i < data.length; i++) {
+    //           if (data[i].cover == "original") {
+    //             data[i].cover = "../../image/logo.png"
+    //           }
+    //         }
+    //         that.setData({
+    //           presentclassdata: data
+    //         })
+    //       } else {
+    //         wx.showToast({
+    //           title: "没有这门课程哦",
+    //           icon: 'success', //图标，支持"success"、"loading"
+    //           mask: false, //是否显示透明蒙层，防止触摸穿透，默认：false 
 
-              success: function () {},
-              fail: function () {},
-              complete: function () {}
-            })
-          }
-        },
-        fail: function (err) {
-          console.log("error:" + err);
-          wx.hideLoading();
+    //           success: function () {},
+    //           fail: function () {},
+    //           complete: function () {}
+    //         })
+    //       }
+    //     },
+    //     fail: function (err) {
+    //       console.log("error:" + err);
+    //       wx.hideLoading();
 
-        },
-        complete: function (e) {
-          wx.hideLoading();
-        }
-      })
-    }
+    //     },
+    //     complete: function (e) {
+    //       wx.hideLoading();
+    //     }
+    //   })
+    // }
   },
 
   chooseCourse: function (e) {

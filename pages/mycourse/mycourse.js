@@ -48,6 +48,7 @@ Page({
       success: function (res) {
         wx.hideLoading();
 
+        console.log(res.data)
         var data = res.data;
           var number = 0;
           for (var i = 0; i < data.length; i++) {

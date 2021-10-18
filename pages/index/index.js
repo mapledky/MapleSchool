@@ -15,7 +15,7 @@ Page({
     let self = this
     wx.showModal({
       title: '用户协议',
-      content: '枫叶云校园旨在服务校园业务处理，包括线上选课，新闻公布，在线授课等。目前枫叶云校园仅开放企业用户统一注册，个人用户暂时不能注册使用枫叶云校园。企业用户统一注册后，可获得用户唯一登陆信息，登陆后可查看相关课程信息，或进行相关修改。枫叶云校园为了给您提供更好的服务，请您务必遵守枫叶云校园的相关使用协议，如若违反，枫叶云校园保有拒绝服务的权利。',
+      content: '枫叶云校园旨在服务校园业务处理，包括线上选课，新闻公布，在线授课等。目前枫叶云校园仅开放企业用户统一注册，个人用户暂时不能注册使用枫叶云校园。企业用户统一注册后，可获得用户登录信息，登录后可查看相关课程信息，或进行相关修改。枫叶云校园为了给您提供更好的服务，请您务必遵守枫叶云校园的相关使用协议，如若违反，枫叶云校园保有拒绝服务的权利。',
       success: function (e) {
         if (e.confirm) {
           // 用户点击了确定 
@@ -87,7 +87,7 @@ Page({
     } else {
       //登陆请求
       wx.showToast({
-        title: "登陆中...",
+        title: "登录中...",
         icon: 'loading', //图标，支持"success"、"loading"
         mask: true, //是否显示透明蒙层，防止触摸穿透，默认：false 
         success: function () {},
@@ -132,7 +132,7 @@ Page({
             app.globalData.userinfo = res.data;
             console.log(app.globalData.userinfo.schoolhead)
             wx.showToast({
-              title: "登陆成功",
+              title: "登录成功",
               icon: 'none',
               mask: false,
               duration: 1000,
@@ -154,7 +154,7 @@ Page({
             })
             app.globalData.userinfo = res.data;
             wx.showToast({
-              title: "企业登陆成功",
+              title: "企业登录成功",
               icon: 'none',
               mask: false,
               duration: 1000,

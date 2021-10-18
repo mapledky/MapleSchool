@@ -93,6 +93,7 @@ Page({
     })
 
     if (this.data.phonenumber != null && this.data.phonenumber != "") {
+      console.log(this.data.phonenumber)
       wx.showToast({
         title: "加载中...",
         icon: 'loading', //图标，支持"success"、"loading"

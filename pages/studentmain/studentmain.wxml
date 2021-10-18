@@ -51,9 +51,9 @@
 			<text class="text">校园风采一览</text>
 		</view>
 
-		<swiper class="lunbo" indicator-dots="true" autoplay="true" wx:if="{{schoolimage!=null}}" interval="3000">
+		<swiper class="lunbo2" indicator-dots="true" autoplay="true" wx:if="{{schoolimage!=null}}" interval="3000">
 			<swiper-item wx:key="{{index}}" wx:for="{{schoolimage}}">
-				<image src="{{item}}" class="schoolimage" />
+				<image src="{{item}}" class="schoolimage2" />
 			</swiper-item>
 		</swiper>
 	</view>

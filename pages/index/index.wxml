@@ -5,8 +5,8 @@
 
 
 		<view class="textview">
-			<input name="account" type="number" maxlength="8" bindinput="getAccount" class="input" placeholder="学号"></input>
-			<input name="password" bindinput="getPassword" class="input" placeholder="密码" password></input>
+			<input name="account" maxlength="20" bindinput="getAccount" class="input" placeholder="姓名"></input>
+			<input name="password" type="password" bindinput="getPassword" class="input" placeholder="密码" maxlength="24"></input>
 		</view>
 
 	<view class="logo">

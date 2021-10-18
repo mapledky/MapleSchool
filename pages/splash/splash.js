@@ -71,7 +71,7 @@ Page({
             app.globalData.userinfo = res.data;
 
             wx.showToast({
-              title: "登陆成功",
+              title: "登录成功",
               icon: 'none',
               mask: false,
               duration: 1000,
@@ -86,7 +86,7 @@ Page({
           
             app.globalData.userinfo = res.data;
             wx.showToast({
-              title: "企业登陆成功",
+              title: "企业登录成功",
               icon: 'none',
               mask: false,
               duration: 1000,
