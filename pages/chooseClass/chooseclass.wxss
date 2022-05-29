@@ -36,6 +36,37 @@
   border-radius: 30rpx;
 }
 
+.navbar{
+  flex:none;
+  display: flex;
+  background: #fff;
+}
+
+.navbar .item{
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 80rpx;
+  color: #888888;
+}
+.navbar .item.active{
+  color: #B1DCFF;
+}
+.navbar .item.active:after{
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 40rpx;
+  right: 40rpx;
+  height: 4rpx;
+  background: #B1DCFF;
+}
+
+.placeholder {
+  color: #888888;
+  caret-color: #B1DCFF;
+}
 .coursepane{
   margin-left: 6%;
   margin-top: 5%;

@@ -5,16 +5,22 @@
 		<text class="search_button" bindtap="searchCourse">搜索</text>
 	</view>
 
+	<view class="navbar">
+		<text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique"
+			bindtap="navbarTap">{{item}}</text>
+	</view>
+
 	<block wx:for="{{presentclassdata}}" wx:for-item="item" wx:for-index="key">
-		<view class="coursepane" style="background-color:{{randomColorArr[key%3]}}" bindtap="chooseCourse" data-course="{{item.Id}}">
+		<view class="coursepane" style="background-color:{{randomColorArr[key%3]}}" bindtap="chooseCourse"
+			data-course="{{item.Id}}">
 			<image class="image" src="{{item.cover}}"></image>
 			<view class="coursedetail">
-			<text>{{item.name}}</text>
-			<text>课程人数:{{item.class_limit}}</text>
-			<text>截止时间:{{item.deadline}}</text>
+				<text style="font-weight: bold;">{{item.name}}</text>
+				<text wx:if="{{userinfo.type==1}}">课程人数:{{item.class_limit}}</text>
+				<text>截止时间:{{item.deadline}}</text>
 			</view>
 			<view style="position:absolute" wx:if="{{item.registerNumber==item.class_limit}}">
-			<image class="maxstudent" src="../../image/max.png"></image>
+				<image class="maxstudent" src="../../image/max.png"></image>
 			</view>
 		</view>
 	</block>

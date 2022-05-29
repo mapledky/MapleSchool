@@ -10,7 +10,7 @@
 		<image class="image" src="{{item.cover}}"></image>
 		<view class="coursedetail">
 			<text>{{item.name}}</text>
-			<text>课程人数:{{item.class_limit}}</text>
+			<text wx:if="{{userinfo.type==1}}">课程人数:{{item.class_limit}}</text>
 			<text>截止时间:{{item.deadline}}</text>
 		</view>
 

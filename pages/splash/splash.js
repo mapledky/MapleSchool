@@ -23,7 +23,7 @@ Page({
 
     if (account != null) {
       wx.showToast({
-        title: "登陆中...",
+        title: "登录中...",
         icon: 'loading', //图标，支持"success"、"loading"
         mask: true, //是否显示透明蒙层，防止触摸穿透，默认：false 
         success: function () {},
@@ -69,7 +69,7 @@ Page({
             })
           } else if (result == 1) {
             app.globalData.userinfo = res.data;
-
+            console.log(res.data)
             wx.showToast({
               title: "登录成功",
               icon: 'none',

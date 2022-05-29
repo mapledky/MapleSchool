@@ -4,10 +4,17 @@
 	<image src="../../image/login_top.png" class="topimage" />
 
 
-		<view class="textview">
-			<input name="account" maxlength="20" bindinput="getAccount" class="input" placeholder="姓名"></input>
-			<input name="password" type="password" bindinput="getPassword" class="input" placeholder="密码" maxlength="24"></input>
+	<view class="textview">
+	
+		<view class="passwordpane">
+		<input name="account" maxlength="20" bindinput="getAccount" class="passwordinput" placeholder="姓名"></input>
+	</view>
+		<view class="passwordpane">
+			<input name="password" password='{{passwordstyle}}' bindinput="getPassword" class="passwordinput" placeholder="密码"
+				maxlength="24"></input>
+				<image bindtap="passwordlook" class="eyeicon" src="{{passwordeye}}"></image>
 		</view>
+	</view>
 
 	<view class="logo">
 		<image bindtap="login" class="avatar" src="../../image/login.png" />
@@ -15,6 +22,6 @@
 	<view class="agree_text">
 		<image src="{{checkSrc}}" bindtap="onCheckClicked" class="check_img" />
 		<text bindtap="toAgreement">用户协议</text>
-		
+
 	</view>
 </view>

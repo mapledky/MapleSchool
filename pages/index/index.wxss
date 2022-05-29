@@ -53,4 +53,26 @@
   margin-right: 5px;
 }
 
+.passwordinput{
+  display: flex;
+  height: 45px;
+  flex: 1;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.passwordpane{
+  border-radius: 30px;
+  background-color: #f1f1f1;
+  margin-top: 8%;
+  align-items: center;
+  padding-left: 10px;
+  display: flex;
+}
+.eyeicon{
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
 

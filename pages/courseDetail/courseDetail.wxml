@@ -1,17 +1,17 @@
 <!--pages/courseDetail/courseDetail.wxml-->
 <view class="coursepane">
-	<image class="image" src="{{courseDetail .cover}}"></image>
+	<image class="image" bindtap="toImage" src="{{courseDetail .cover}}"></image>
 	<view class="coursedetail">
-		<text>{{courseDetail.name}}</text>
-		<text>课程人数:{{courseDetail.class_limit}}</text>
-		<text>截止时间:{{courseDetail.deadline}}</text>
+		<text style="font-weight: bold;">{{courseDetail.name}}</text>
+		<text wx:if="{{userinfo.type==1}}" style="font-weight: bold;">课程人数:{{courseDetail.class_limit}}</text>
+		<text style="font-weight: bold;">截止时间:{{courseDetail.deadline}}</text>
 	</view>
 </view>
 
 
 <view class="descriptionPane">
 	<view class="textback" style="background-color:rgb(181, 255, 162)">
-		<text>当前报名人数:{{courseDetail.registerNumber}}</text>
+		<text wx:if="{{userinfo.type==1}}" >当前报名人数:{{courseDetail.registerNumber}}</text>
 		<text>报名开始日期:{{courseDetail.startDate}}</text>
 	</view>
 </view>
@@ -27,7 +27,24 @@
 	<view class="description">
 		{{courseDetail.description}}</view>
 </view>
+<view  wx:if="{{userinfo.type==1}}" class="textpane">
+	<view class="description">
+		<image class="imageicon" src="../../image/about.png"></image>
+		<text style="font-size: small;">	已报名学生名单</text>
+	</view>
+</view>
 
+<view  wx:if="{{userinfo.type==1}}" class="studentpane">
+	<block wx:for="{{courseDetail.student_list}}" wx:for-item="item" wx:for-index="key">
+	<view class="studentpane_list">
+		<view style="font-size: small;" class="studenttext">
+			·{{item.name}}</view>
+			<view style="font-size: small;" class="studenttext">
+			{{item.class}}</view>
+	</view>
+
+	</block>
+</view>
 
 <view class="register" bindtap="register">
 	<text class="registertext">立即报名</text>
@@ -42,7 +59,8 @@
 			</view>
 			<view class='toast-main'>
 				<view class='toast-input'>
-					<input type='number' maxlength="20" placeholder='输入家长电话号码' bindinput='setValue' data-name='stuEidtName'></input>
+					<input type='number' maxlength="20" placeholder='输入家长电话号码' bindinput='setValue'
+						data-name='stuEidtName'></input>
 				</view>
 			</view>
 			<view class='toast-button'>

@@ -37,6 +37,15 @@ Page({
     })
   },
 
+  toImage:function(e) {
+    var index = e.currentTarget.dataset.index
+    var that = this
+    wx.previewImage({
+      current:that.data.schoolimage[index],
+      urls: that.data.schoolimage,
+    })
+  },
+
   //进入云选课
   chooseClass: function () {
     wx.navigateTo({

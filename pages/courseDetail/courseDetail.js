@@ -11,15 +11,24 @@ Page({
     courseDetail: null,
     phonenumber: null,
     isShowConfirm: false,
-    originalPic: "https://site.maple.today/mapleschool/2/head/head.jpg"
+    originalPic: "https://site.maple.today/mapleschool/2/head/head.jpg",
+    userinfo: null,
   },
 
+  toImage: function () {
+    var that = this
+    wx.previewImage({
+      current:that.data.courseDetail.cover,
+      urls: [that.data.courseDetail.cover],
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     this.setData({
       courseId: options.courseId,
+      userinfo: app.globalData.userinfo
     })
     wx.showToast({
       title: "加载中...",
@@ -42,7 +51,9 @@ Page({
       },
       success: function (res) {
         wx.hideLoading();
+
         var data = res.data[0];
+        console.log(data)
         if (data.cover == "original") {
           data.cover = "../../image/logo.png"
         }
@@ -118,7 +129,7 @@ Page({
         },
         success: function (res) {
           wx.hideLoading();
-
+          console.log(res.data)
           switch (res.data.result) {
             case "0":
               wx.showToast({
@@ -206,17 +217,17 @@ Page({
                 complete: function () {}
               })
               break;
-              case "8":
-                wx.showToast({
-                  title: "该课程并非为对应年级课程",
-                  icon: 'none',
-                  duration: 3000,
-                  mask: false,
-                  success: function () {},
-                  fail: function () {},
-                  complete: function () {}
-                })
-                break;
+            case "8":
+              wx.showToast({
+                title: "该课程并非为对应年级课程",
+                icon: 'none',
+                duration: 3000,
+                mask: false,
+                success: function () {},
+                fail: function () {},
+                complete: function () {}
+              })
+              break;
             default:
               break;
           }
@@ -226,8 +237,7 @@ Page({
           wx.hideLoading();
 
         },
-        complete: function (e) {
-        }
+        complete: function (e) {}
       })
     } else {
       wx.showToast({

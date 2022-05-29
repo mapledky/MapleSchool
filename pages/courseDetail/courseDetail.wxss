@@ -30,7 +30,6 @@
   margin-top: 5%;
 }
 .textback{
-
   padding:10px;
   background-color: rgb(238, 238, 238);
   border-radius: 15px;
@@ -46,6 +45,29 @@
   margin-left: 6%;
   width: 88%;
 }
+.imageicon{
+  width: 25px;
+  height: 25px;
+  padding: 2%;
+}
+
+.studentpane{
+  margin-top: 5%;
+  margin-bottom: 15%;
+  margin-left: 6%;
+  background-color: rgb(238, 238, 238);
+  border-radius: 15px;
+  width: 88%;
+}
+.studentpane_list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.studenttext{
+  padding: 2%;
+}
+
 .description{
   padding: 2%; 
   background-color: rgb(238, 238, 238);

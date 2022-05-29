@@ -6,8 +6,23 @@ Page({
   data: {
     isTipTrue: false,
     checkSrc: '../../image/check_not.png',
+    passwordstyle:true,
+    passwordeye:'../../image/eye.png',
     account: "",
     password: "",
+  },
+
+  passwordlook:function(){
+    this.data.passwordstyle = !this.data.passwordstyle
+    if(this.data.passwordstyle){
+      this.data.passwordeye = '../../image/eye.png'
+    } else {
+      this.data.passwordeye = '../../image/eyeclose.png'
+    }
+    this.setData({
+      passwordstyle:this.data.passwordstyle,
+      passwordeye:this.data.passwordeye
+    })
   },
 
   onLoad: function (options) {
@@ -130,7 +145,7 @@ Page({
               key: 'password',
             })
             app.globalData.userinfo = res.data;
-            console.log(app.globalData.userinfo.schoolhead)
+            console.log(res.data)
             wx.showToast({
               title: "登录成功",
               icon: 'none',

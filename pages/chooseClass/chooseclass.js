@@ -6,17 +6,53 @@ Page({
    * 页面的初始数据
    */
   data: {
+    navbar: ['可选课程', '其他课程'],
+    currentTab: 0,
+
     searchValue: null,
     allclassdata: [],
+    unacceptableclassdata: [],
     randomColorArr: ["#e4f77a", "#B1DCFF", "#FFDC65"],
     presentclassdata: [],
     cacheclassdata: [],
+    userinfo:null,
+  },
+
+  navbarTap: function (e) {
+    var tab = e.currentTarget.dataset.idx
+    if (this.data.currentTab != tab) {
+      var classData = []
+      var alldata = []
+      if (tab == 0) {
+        alldata = this.data.allclassdata
+      } else {
+        alldata = this.data.unacceptableclassdata
+      }
+      for (var i = 0; i < alldata.length; i++) {
+        if (i < 10) {
+          classData.push(alldata[i]);
+        } else {
+          break;
+        }
+      }
+      this.setData({
+        presentclassdata: classData,
+        cacheclassdata: classData
+      })
+    }
+    this.setData({
+      currentTab: tab
+    })
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      userinfo:app.globalData.userinfo
+    })
     wx.showToast({
       title: "加载中...",
       icon: 'loading', //图标，支持"success"、"loading"
@@ -32,8 +68,8 @@ Page({
       data: {
         requestCode: "002", //当前页
         school: app.globalData.userinfo.school,
-        grade:app.globalData.userinfo.grade,
-        user_id:app.globalData.userinfo.Id
+        grade: app.globalData.userinfo.grade,
+        user_id: app.globalData.userinfo.Id
       },
       method: 'POST',
       header: {
@@ -42,23 +78,34 @@ Page({
       success: function (res) {
         wx.hideLoading();
         var data = res.data;
+        var acceptableclass = [];
+        var unacceptableclass = [];
+
+        console.log(data)
         for (var i = 0; i < data.length; i++) {
           if (data[i].cover == "original") {
             data[i].cover = "../../image/logo.png"
           }
+          if (data[i].dismiss == 0) {
+            unacceptableclass.push(data[i])
+          } else {
+            acceptableclass.push(data[i])
+          }
         }
 
         var classData = []
-        for (var i = 0; i < data.length; i++) {
-          if (i <10) {
-            classData.push(data[i]);
+        for (var i = 0; i < acceptableclass.length; i++) {
+          if (i < 10) {
+            classData.push(acceptableclass[i]);
+          
           } else {
             break;
           }
         }
 
         that.setData({
-          allclassdata: data,
+          allclassdata: acceptableclass,
+          unacceptableclassdata: unacceptableclass,
           presentclassdata: classData,
           cacheclassdata: classData
         })
@@ -90,19 +137,25 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    if (this.data.presentclassdata.length < this.data.allclassdata.length) {
+    var alldata;
+    if (this.data.currentTab == 0) {
+      alldata = this.data.allclassdata
+    } else {
+      alldata = this.data.unacceptableclassdata
+    }
+    if (this.data.presentclassdata.length < alldata.length) {
       var num = 0;
       var classData = this.data.presentclassdata;
-      for (var i = this.data.presentclassdata.length; i < this.data.allclassdata.length; i++) {
-        classData.push(this.data.allclassdata[i]);
+      for (var i = this.data.presentclassdata.length; i < alldata.length; i++) {
+        classData.push(alldata[i]);
         num++;
         if (num == 10) {
           break;
         }
       }
       this.setData({
-        presentclassdata:classData,
-        cacheclassdata:classData
+        presentclassdata: classData,
+        cacheclassdata: classData
       })
     } else {
       wx.showToast({

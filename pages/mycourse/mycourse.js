@@ -11,7 +11,8 @@ Page({
     registerNumber: 0,
     mycourseData: null,
     presentData:null,
-    choosecourse: null
+    choosecourse: null,
+    userinfo:null,
   },
 
   /**
@@ -20,6 +21,7 @@ Page({
   onLoad: function (options) {
     this.setData({
       user_id: app.globalData.userinfo.Id,
+      userinfo:app.globalData.userinfo
     })
     this.refreshData();
   },
